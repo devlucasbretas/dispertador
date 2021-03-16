@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dispertador</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link href="//db.onlinewebfonts.com/c/233131eb5b5e4a930cbdfb07008a09e1?family=LCD" rel="stylesheet" type="text/css"/> 
+</head>
+<body onload="setInterval(relogio, 1000)" background="bg.jpg">
+    <audio id="audio1">
+        <source src="tic-tac.mp3" type="audio/mpeg">
+    </audio>
+    <div class="clock" id="clockb">
+        <div class="data" id="data">
+            <p id="dia"></p>
+            <p id="mes"></p>
+            <p id="ano"></p>
+        </div>
+        <div class="theme">
+            <button onclick="night()"><i class="fas fa-moon"></i></button>
+            <button onclick="day()"><i class="fas fa-sun"></i></button>
+        </div>
+        <div class="timer">
+            <p id="horas">00</p>
+            <p id="point1">:</p>
+            <p id="minutos">00</p>
+            <p id="point2">:</p>
+            <p id="segundos">00</p>
+        </div>
+        <div class="alarme">
+            Definir Alarme
+            <input id="hora-def" type="number" placeholder="Hora">
+            <input  id="minuto-def" type="number" placeholder="Minuto">
+            <button onclick="defAlarme()">Pronto</button>
+        </div>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>
